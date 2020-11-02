@@ -1,0 +1,82 @@
+html, body {
+	font-family: monospace;
+	font-size: 14px;
+}
+
+header, footer, #picker {
+	text-align: center;
+}
+
+header, main, footer {
+	width: 100%;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2  {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+}
+
+p {
+	margin: 0.5rem 0;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
+header h1 {
+	padding: 1.5rem 0.5rem 0.25rem;
+}
+
+header p {
+	padding: 0 0.5rem 1.5rem;
+}
+
+footer {
+	bottom: 0;
+	position: absolute;
+}
+
+footer p {
+	padding: 1rem;
+}
+
+main {
+	margin: 20vh auto 0;
+	max-width: 75%;
+}
+
+.triggered {
+	display: none;
+}
+
+.button-row {
+	padding: 0.5rem;
+}
+
+.button-row button {
+	padding: 0.25rem;
+	width: 10%;
+}
+
+@media screen and (max-width: 800px) {
+	main {
+		margin: 2vh auto 0;
+		max-width: 90%;
+	}
+}
