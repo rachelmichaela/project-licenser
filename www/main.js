@@ -26,45 +26,42 @@ var licenses = new Map([
 	["Copyright, no free software license", 0]
 ]);
 
-var stages = new Map([
-	["Are you licensing a software project?", null],
-	["Should users be able to modify your source code?", null],
-	["Should users be required to distribute their modifications?", null]
-]);
-
 function weight(license) {
 	licenses.set(license, licenses.get(license)++);
 }
 
+var stages = [
+	["Are you licensing a software project?", 2, 1],
+	["Project licenser does not support creative projects at this time.", null, null],
+	["Should users be able to modify your source code?", 4, 3],
+	["We recommend copyright with no free software license for your project.", null, null],
+	["Should users be required to distribute their modifications?", 5, 6],
+	["We recommend the GNU General Public License, version 3.0 or later for your project.", null, null],
+	["We recommend the BSD 2-Clause License for your project.", null, null]
+];
+
+var step = 0;
+
 function response(boolean) {
 	if (boolean == true) {
-		stages.set(document.getElementById("question").textContent, 1);
+		step = stages[step][1];
 	} else {
-		stages.set(document.getElementById("question").textContent, 0);
+		step = stages[step][2];
 	}
 	progress();
 }
 
 function progress() {
-	if (stages.get("Are you licensing a software project?") != 1) {
-		setQuestion("Project licenser does not support creative projects at this time.")
+	if (step == 1) {
+		setQuestion(stages[1][0]);
 		end();
-	} else {
-		if(stages.get("Should users be able to modify your source code?") == null) {
-			setQuestion("Should users be able to modify your source code?");
-		} else if (stages.get("Should users be able to modify your source code?") == 1) {
-			if(stages.get("Should users be required to distribute their modifcations?") == null) {
-				setQuestion("Should users be required to distribute their modifcations?");
-			} else if (stages.get("Should users be required to distribute their modifcations?") == 1) {
-				setQuestion("We recommend the GNU General Public License, version 3.0 for your project.");
-				end();
-			} else {
-				setQuestion("We recommend the BSD 2-Clause License for your project.");
-				end();
-			}
-		} else {
-			setQuestion("We recommend standard copyright with no free software license for your project.");
+	}
+	if (step >= 2) {
+		if (stages[step][1] == null) {
+			setQuestion(stages[step][0])
 			end();
+		} else {
+			setQuestion(stages[step][0]);
 		}
 	}
 }
