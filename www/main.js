@@ -108,8 +108,6 @@ function response(boolean) {
 }
 
 function progress(itsTimeToChooseMrFreeman) {
-	console.log("Step: " + step);
-	console.log("Software licenses array:" + softwareLicenses);
 	if (itsTimeToChooseMrFreeman == 1) {
 		setQuestion(calculateResult());
 		end();
