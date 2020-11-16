@@ -20,14 +20,43 @@ function restartbtn() {
 	location.reload(true);
 }
 
-var licenses = new Map([
+var softwareLicenses = new Map([
+	["Apache License, version 2.0", 0],
 	["BSD 2-Clause License", 0],
+	["BSD 3-Clause License", 0],
+	["BSD 4-Clause License", 0],
+	["Common Development and Distribution License", 0],
+	["Copyright, no free software license", 0],
 	["GNU Affero General Public License, version 3.0", 0],
-	["Copyright, no free software license", 0]
+	["GNU All-Permissive License", 0],
+	["GNU General Public License, version 3.0", 0],
+	["GNU Lesser General Public License, version 3.0", 0],
+	["ISC License", 0],
+	["Mozilla Public License, version 2.0", 0],
+	["Public domain, no free software license", 0]
 ]);
 
-function weight(license) {
-	licenses.set(license, licenses.get(license)++);
+var creativeLicenses = new Map([
+	["Copyright, no license", 0],
+	["Creative Commons Attribution 4.0", 0],
+	["Creative Commons Attribution No-Derivatives 4.0", 0],
+	["Creative Commons Attribution Non-Commercial 4.0", 0],
+	["Creative Commons Attribution Non-Commercial No-Derivatives 4.0", 0],
+	["Creative Commons Attribution Non-Commercial Share-Alike 4.0", 0],
+	["Creative Commons Attribution Share-Alike 4.0", 0],
+	["FreeBSD Documentation License", 0],
+	["GNU Free Documentation License", 0],
+	["GNU Verbatim Copyright License", 0],
+	["Public Domain", 0],
+	["SIL Open Font License", 0]
+]);
+
+function weight(type, license) {
+	if (type == "software") {
+		softwareLicenses.set(license, softwareLicenses.get(license)++);
+	} else {
+		creativeLicenses.set(license, creativeLicenses.get(license)++);
+	}
 }
 
 var stages = [
