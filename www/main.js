@@ -51,8 +51,8 @@ var creativeLicenses = new Map([
 	["SIL Open Font License", 0]
 ]);
 
-function weight(type, license) {
-	if (type == "software") {
+function weight(license) {
+	if (software == 1) {
 		softwareLicenses.set(license, softwareLicenses.get(license)++);
 	} else {
 		creativeLicenses.set(license, creativeLicenses.get(license)++);
@@ -70,9 +70,14 @@ var stages = [
 ];
 
 var step = 0;
+var software = 0;
+var existingProject = 0;
 
 function response(boolean) {
 	if (boolean == true) {
+		if (step == 0) {
+			software = 1;
+		}
 		step = stages[step][1];
 	} else {
 		step = stages[step][2];
@@ -81,11 +86,9 @@ function response(boolean) {
 }
 
 function progress() {
-	if (step == 1) {
-		setQuestion(stages[1][0]);
-		end();
-	}
-	if (step >= 2) {
+	if (step <= -1) {
+		setQuestion(calculateResult());
+	} else {
 		if (stages[step][1] == null) {
 			setQuestion(stages[step][0])
 			end();
@@ -97,4 +100,27 @@ function progress() {
 
 function setQuestion(questionText) {
 	document.getElementById("question").textContent = questionText;
+}
+
+function calculateResult() {
+	var str = null;
+	var result = [null, 0];
+	var licenseMap = null;
+	if (existingProject = 0) {
+		if (software == 1) {
+			licenseMap == softwareLicenses;
+		} else {
+			licenseMap == creativeLicenses;
+		}
+		for (const [license, weight] of licenseMap.entries()) {
+			if (weight > result[1]) {
+				result[0] = license;
+				result[1] = weight;
+			}
+		}
+		str = "We recommend " + result[0] + " for your project.";
+	} else {
+		str = "We recommend using the license already used by your project.";
+	}
+	return str;
 }
