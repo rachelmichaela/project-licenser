@@ -1,0 +1,202 @@
+[
+	{
+		"name": "Apache License, version 2.0",
+		"category": "Software",
+		"type": "Permissive",
+		"patent": "Yes",
+		"promotion": "Yes",
+		"url": "goeshere"
+	},
+	{
+		"name": "BSD 2-Clause License",
+		"category": "Software",
+		"type": "Permissive",
+		"patent": "No",
+		"promotion": "No",
+		"url": "goeshere"
+	},
+	{
+		"name": "BSD 3-Clause License",
+		"category": "Software",
+		"type": "Permissive",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "BSD 3-Clause License",
+		"category": "Software",
+		"type": "Permissive",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "BSD 4-Clause License",
+		"category": "Software",
+		"type": "Permissive",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "Common Development and Distribution License",
+		"category": "Software",
+		"type": "Copyleft; not GPL compatible",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "Copyright, no license",
+		"category": "Universal",
+		"type": "Copyright",
+		"patent": "N/A",
+		"promotion": "N/A",
+		"url": "goeshere"
+	},
+	{
+		"name": "GNU Affero General Public License, version 3.0",
+		"category": "Software",
+		"type": "Copyleft; overrides the GNU GPL",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "GNU All-Permissive License",
+		"category": "Software",
+		"type": "Permissive",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "GNU General Public License, version 3.0",
+		"category": "Software",
+		"type": "Copyleft",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "GNU Lesser General Public License, version 3.0",
+		"category": "Software",
+		"type": "Copyleft for libraries; GPL compatible",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "ISC License",
+		"category": "Software",
+		"type": "Permissive",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "Mozilla Public License, version 2.0",
+		"category": "Software",
+		"type": "Copyleft; GPL compatible",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "Public domain, no license",
+		"category": "Universal",
+		"type": "Public domain",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "CC0",
+		"category": "Creative or Cultural",
+		"type": "Public domain",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "Creative Commons Attribution 4.0",
+		"category": "Creative or Cultural",
+		"type": "Free to share and modify with credit",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "Creative Commons Attribution No-Derivatives 4.0",
+		"category": "Creative or Cultural",
+		"type": "Free to share with credit, but not modify",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "Creative Commons Attribution Non-Commercial 4.0",
+		"category": "Creative or Cultural",
+		"type": "Free to share and modify with credit, but not for profit",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "Creative Commons Attribution Non-Commercial No-Derivatives 4.0",
+		"category": "Creative or Cultural",
+		"type": "Free to share with credit, but not modify and not for profit",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "Creative Commons Attribution Non-Commercial Share-Alike 4.0",
+		"category": "Creative or Cultural",
+		"type": "Free to share and modify with credit, but not for profit, and only under the same license",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "Creative Commons Attribution Share-Alike 4.0",
+		"category": "Creative or Cultural",
+		"type": "Free to share and modify with credit, but only under the same license",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "FreeBSD Documentation License",
+		"category": "Creative or Cultural (Documentation-Oriented)",
+		"type": "Permissive",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "GNU Free Documentation License",
+		"category": "Creative or Cultural (Documentation-Oriented)",
+		"type": "Copyleft",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "GNU Verbatim Copyright License",
+		"category": "Creative or Cultural (Testimony-Oriented)",
+		"type": "Copyright",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	},
+	{
+		"name": "SIL Open Font License",
+		"category": "Creative or Cultural (Font-Oriented)",
+		"type": "Copyleft",
+		"patent": "goeshere",
+		"promotion": "goeshere",
+		"url": "goeshere"
+	}
+]
