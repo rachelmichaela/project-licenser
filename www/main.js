@@ -101,14 +101,14 @@ function response(boolean) {
 	}
 
 	if (step == 0 || step == -1) {
-		progress(1);
-	} else {
 		progress(0);
+	} else {
+		progress(1);
 	}
 }
 
 function progress(itsTimeToChooseMrFreeman) {
-	if (itsTimeToChooseMrFreeman == 1) {
+	if (itsTimeToChooseMrFreeman == 0) {
 		setQuestion(calculateResult());
 		end();
 	} else {
