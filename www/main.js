@@ -1,3 +1,10 @@
+function pageLoad() {
+	hide("body");
+	hide("noscript");
+	show("start");
+	show("body");
+}
+
 function hide(elementID) {
 	document.getElementById(elementID).style.display = "none";
 }

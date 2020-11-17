@@ -8,13 +8,20 @@
 		<link type="text/css" rel="stylesheet" href="main.css" />
 		<script type="text/javascript" src="main.js"></script>
 	</head>
-	<body>
+	<body onload="pageLoad()" id="body">
 		<header>
 			<h1>Project Licenser</h1>
 			<p><em>A tool that helps you pick a license for your project.</em></p>
 		</header>
 		<main>
-			<section id="start">
+			<noscript id="noscript">
+				<p>Unfortunately, this page requires JavaScript. Follow the instructions below to run this page.</p>
+				<p><strong>Emacs:</strong> Run <a href="https://www.gnu.org/software/emacs/manual/html_mono/eww.html#Basics">& (eww-browse-with-external-browser)</a> inside your Emacs Web Wowser buffer to open this page in an external web browser.</p>
+				<p><strong>Lynx:</strong> Install <a href="http://elinks.or.cz">ELinks</a> via your operating system's package manager, if your version of ELinks provides JavaScript support.</p>
+				<p><strong>Firefox:</strong> Switch to the JavaScript blocking plugin <a href="https://www.gnu.org/software/librejs/index.html">GNU LibreJS</a>. It allows free software scripts such as this page to run, blocking only proprietary scripts.</p>
+				<p><strong>Other browsers:</strong> Use one of the browsers mentioned above and follow the troubleshooting steps provided.</p>
+			</noscript>
+			<section id="start" class="triggered">
 				<h2>How to use Project Licenser</h2>
 				<p>Project Licenser is simple to use. You will be presented with a series of yes or no questions. As you select answers, the list of suitable licenses will shrink. Once a suitable license is clear, you will be informed of your match.</p>
 				<p><a href="#" onclick="begin()">Click here to begin.</a></p>
