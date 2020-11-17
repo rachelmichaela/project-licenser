@@ -1,3 +1,9 @@
+/**
+ * When the page is initially loaded, this function will hide all of the
+ * body of the page. It will then hide the tag that displays when
+ * JavaScript is not enabled and show the tag that explains how to start
+ * using the picker, redisplaying the body tag at the end.
+ */
 function pageLoad() {
 	hide("body");
 	hide("noscript");
@@ -5,28 +11,56 @@ function pageLoad() {
 	show("body");
 }
 
+/**
+ * Hides the element provided by the formal argument by setting the tag
+ * display value to "none".
+ *
+ * @param {string} the element ID.
+ */
 function hide(elementID) {
 	document.getElementById(elementID).style.display = "none";
 }
 
+/**
+ * Shows the element provided by the formal argument by setting the tag
+ * display value to "block".
+ *
+ * @param {string} the element ID.
+ */
 function show(elementID) {
 	document.getElementById(elementID).style.display = "block";
 }
 
+/**
+ * Starts the picking process by removing the explanatory start tag and
+ * enabling the picker tags.
+ */
 function begin() {
 	hide("start");
 	show("picker");
 }
 
+/**
+ * Ends the picking process by removing all picker buttons, except for
+ * the restart button.
+ */
 function end() {
 	hide("yes");
 	hide("no");
 }
 
+/**
+ * This function triggers when the restart button is clicked. It will
+ * reload the page, restarting the script from the beginning.
+ */
 function restartbtn() {
 	location.reload(true);
 }
 
+/**
+ * The array of software licenses supported by the picker. Each item is
+ * formatted by the license name followed by the current license weight.
+ */
 var softwareLicenses = [
 	["Apache License, version 2.0", 0], // 0
 	["BSD 2-Clause License", 0], // 1
@@ -43,6 +77,10 @@ var softwareLicenses = [
 	["Public domain, no free software license", 0] // 12
 ];
 
+/**
+ * The array of creative licenses supported by the picker. Each item is
+ * formatted by the license name followed by the current license weight.
+ */
 var creativeLicenses = [
 	["CC0", 0], // 0
 	["Copyright, no license", 0], // 1
@@ -59,6 +97,12 @@ var creativeLicenses = [
 	["SIL Open Font License", 0] // 12
 ];
 
+/**
+ * Weights the licenses based on the array provided by the formal
+ * argument.
+ * 
+ * @param {array} the array of licenses.
+ */
 function weight(licenses) {
 	if (software == 1) {
 		licenses.forEach(function(currentValue) {
@@ -71,6 +115,17 @@ function weight(licenses) {
 	}
 }
 
+/**
+ * The array of stages that the picker will proceed through based on
+ * user input. Each item is formatted by the text that will be displayed
+ * to the user, followed by two integers representing the yes and no
+ * response steps respectively, followed by two arrays of license
+ * indexes. 
+ *
+ * For each item in the array of license indexes, the equivalent item in
+ * the arrays of licenses will be weighted by the weight(i) function. If
+ * the array of license indexes is null, no weighting occurs.
+ */
 var stages = [
 	["Are you contributing to an existing project?", -1, 1, null, null], // existing project license, next question
 	["Are you licensing a software project?", 2, 14, null, null], // software branch, creative branch
@@ -101,9 +156,37 @@ var stages = [
 	["Should users be required to share derivative works under the same license?", 0, 0, [6], [4]]
 ];
 
+/**
+ * The current step of the picker script in the stages array.
+ */
 var step = 0;
+
+/**
+ * A representation of whether or not the user is licensing a software
+ * project. 
+ *
+ * Set to zero by default; set to one if the user is licensing a 
+ * software project.
+ */
 var software = 0;
 
+/**
+ * This function triggers when either the yes or the no buttons are
+ * triggered. It will then progress the script towards the next
+ * relevant item of the array of picker stages by setting the current
+ * step to the relevant item of the array of picker stages and
+ * running the progress(i) function with the relevant argument.
+ * 
+ * If the current step is the first step into the software branch of
+ * the array of picker stages, and the response is true, then the
+ * global variable step will be incremented to one.
+ *
+ * Based on whether or not the yes or no buttons were pressed, it will
+ * weight the appropriate arrays of licenses in the manner informed by
+ * the current step in the array of picker stages.
+ *
+ * @param {boolean} which button the user clicked.
+ */
 function response(boolean) {
 	if (boolean == true && step == 1) {
 		software = 1;
@@ -128,6 +211,18 @@ function response(boolean) {
 	}
 }
 
+/**
+ * Progresses through the array of picker stages by setting the question
+ * text displayed to the user to the relevant picker stage question
+ * text.
+ *
+ * If instructed that progression in the array of picker stages should
+ * halt, it will instead perform the recommended license calculation and
+ * display the result to the user. It will also remove all input buttons
+ * excluding the restart button.
+ * 
+ * @param {integer} if a license should be recommended.
+ */
 function progress(itsTimeToChooseMrFreeman) {
 	if (itsTimeToChooseMrFreeman == 0) {
 		setQuestion(calculateResult());
@@ -137,10 +232,28 @@ function progress(itsTimeToChooseMrFreeman) {
 	}
 }
 
+/**
+ * Sets the question text displayed to the user to the string provided
+ * by the formal argument.
+ * 
+ * @param {string} the new question text.
+ */
 function setQuestion(questionText) {
 	document.getElementById("question").textContent = questionText;
 }
 
+/**
+ * Calculates the appropriate license that should be displayed to the
+ * user based on their provided input.
+ * 
+ * If the user is working on an existing project, it will automatically
+ * return a recommendation of the project's existing license. Otherwise,
+ * it will evaluate the arrays of licenses and determine which license
+ * as the most weight. It will then return a string representing the
+ * recommendation of the license with the most weight.
+ *
+ * @return {string} the recommended license text.
+ */
 function calculateResult() {
 	var str = null;
 	var result = [null, 0];
