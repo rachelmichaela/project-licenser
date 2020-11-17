@@ -67,14 +67,14 @@ var softwareLicenses = [
 	["BSD 3-Clause License", 0], // 2
 	["BSD 4-Clause License", 0], // 3
 	["Common Development and Distribution License", 0], // 4
-	["Copyright, no free software license", 0], // 5
+	["Copyright, no license", 0], // 5
 	["GNU Affero General Public License, version 3.0", 0], // 6
 	["GNU All-Permissive License", 0], // 7
 	["GNU General Public License, version 3.0", 0], // 8
 	["GNU Lesser General Public License, version 3.0", 0], // 9
 	["ISC License", 0], // 10
 	["Mozilla Public License, version 2.0", 0], // 11
-	["Public domain, no free software license", 0] // 12
+	["Public domain, no license", 0] // 12
 ];
 
 /**
@@ -93,7 +93,7 @@ var creativeLicenses = [
 	["FreeBSD Documentation License", 0], // 8
 	["GNU Free Documentation License", 0], // 9
 	["GNU Verbatim Copyright License", 0], // 10
-	["Public Domain", 0], // 11
+	["Public domain, no license", 0], // 11
 	["SIL Open Font License", 0] // 12
 ];
 
@@ -225,21 +225,22 @@ function response(boolean) {
  */
 function progress(itsTimeToChooseMrFreeman) {
 	if (itsTimeToChooseMrFreeman == 0) {
-		setQuestion(calculateResult());
+		setContent("question", calculateResult());
 		end();
 	} else {
-		setQuestion(stages[step][0])
+		setContent("question", stages[step][0])
 	}
 }
 
 /**
- * Sets the question text displayed to the user to the string provided
- * by the formal argument.
+ * Sets the text content displayed to the user to the string provided
+ * by the formal argument for the element ID provided by the formal
+ * argument.
  * 
- * @param {string} the new question text.
+ * @param {string} The new element text content.
  */
-function setQuestion(questionText) {
-	document.getElementById("question").textContent = questionText;
+function setContent(contentID, contentText) {
+	document.getElementById(contentID).textContent = contentText;
 }
 
 /**
@@ -270,9 +271,33 @@ function calculateResult() {
 				result[1] = currentValue[1];
 			}
 		});
+		fetch("licenses.json").then(
+		response => response.json()
+		).then(function(response) {
+			response.forEach(function(currentValue) {
+				console.log(currentValue);
+				console.log("currentValue.name: " + currentValue.name);
+				console.log("Result[0]: " + result[0]);
+				if (currentValue.name == result[0]) {
+					setContent("detailsName", currentValue.name);
+					setContent("detailsCategory", currentValue.category);
+					setContent("detailsType", currentValue.type);
+					setContent("detailsPatent", currentValue.patent);
+					setContent("detailsPromotion", currentValue.promotion);
+					document.getElementById("detailsURL").href = currentValue.url; 
+					show("details");
+				}
+			});
+		});
 		str = "We recommend \"" + result[0] + "\" for your project.";
 	} else {
 		str = "We recommend using the license already used by your project.";
 	}
 	return str;
 }
+
+/*
+licenses.forEach(function(currentValue) {
+	softwareLicenses[currentValue][1]++;
+});
+*/

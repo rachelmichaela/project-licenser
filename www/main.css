@@ -35,6 +35,21 @@ em {
 	font-style: italic;
 }
 
+table, th, td {
+	border: 1px solid black;
+	border-collapse: separate;
+	padding: 0.2rem;
+}
+
+table {
+	width: 100%;
+}
+
+th {
+	font-weight: bold;
+	text-align: center;
+}
+
 strong {
 	font-weight: bold;
 }
@@ -59,6 +74,10 @@ footer p {
 main {
 	margin: 20vh auto 0;
 	max-width: 75%;
+}
+
+.details {
+	max-width: 42rem;
 }
 
 .triggered {
