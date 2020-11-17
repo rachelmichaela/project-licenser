@@ -295,9 +295,3 @@ function calculateResult() {
 	}
 	return str;
 }
-
-/*
-licenses.forEach(function(currentValue) {
-	softwareLicenses[currentValue][1]++;
-});
-*/
