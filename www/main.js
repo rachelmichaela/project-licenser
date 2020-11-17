@@ -157,7 +157,7 @@ function calculateResult() {
 				result[1] = currentValue[1];
 			}
 		});
-		str = "We recommend " + result[0] + " for your project.";
+		str = "We recommend \"" + result[0] + "\" for your project.";
 	} else {
 		str = "We recommend using the license already used by your project.";
 	}
