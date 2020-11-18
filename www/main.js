@@ -284,6 +284,7 @@ function calculateResult() {
 					setContent("detailsType", currentValue.type);
 					setContent("detailsPatent", currentValue.patent);
 					setContent("detailsPromotion", currentValue.promotion);
+					setContent("detailsCompatible", currentValue.compatible);
 					document.getElementById("detailsURL").href = currentValue.url; 
 					show("details");
 				}
