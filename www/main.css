@@ -11,6 +11,24 @@ header, main, footer {
 	width: 100%;
 }
 
+html, body {
+	height: 100%;
+}
+
+body {
+	display: flex !important;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+header, footer {
+	flex-shrink: 0;
+}
+
+main {
+	flex: 1;
+}
+
 h1 {
 	font-size: 2rem;
 }
@@ -60,11 +78,6 @@ header h1 {
 
 header p {
 	padding: 0 0.5rem 1.5rem;
-}
-
-footer {
-	bottom: 0;
-	position: absolute;
 }
 
 footer p {
