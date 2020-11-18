@@ -5,7 +5,7 @@
 		"type": "Permissive",
 		"patent": "Yes",
 		"promotion": "Yes",
-		"url": "goeshere"
+		"url": "http://directory.fsf.org/wiki/License:Apache2.0"
 	},
 	{
 		"name": "BSD 2-Clause License",
@@ -13,39 +13,31 @@
 		"type": "Permissive",
 		"patent": "No",
 		"promotion": "No",
-		"url": "goeshere"
+		"url": "https://directory.fsf.org/wiki?title=License:FreeBSD"
 	},
 	{
 		"name": "BSD 3-Clause License",
 		"category": "Software",
-		"type": "Permissive",
+		"type": "Permissive; not GNU GPL compatible",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
-	},
-	{
-		"name": "BSD 3-Clause License",
-		"category": "Software",
-		"type": "Permissive",
-		"patent": "goeshere",
-		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://directory.fsf.org/wiki/License:BSD-3-Clause"
 	},
 	{
 		"name": "BSD 4-Clause License",
 		"category": "Software",
-		"type": "Permissive",
+		"type": "Permissive; not GNU GPL compatible",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://directory.fsf.org/wiki/License:BSD-4-Clause"
 	},
 	{
 		"name": "Common Development and Distribution License",
 		"category": "Software",
-		"type": "Copyleft; not GPL compatible",
+		"type": "Copyleft; not GNU GPL compatible",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://directory.fsf.org/wiki/License:CDDL-1.0"
 	},
 	{
 		"name": "Copyright, no license",
@@ -53,7 +45,7 @@
 		"type": "Copyright",
 		"patent": "N/A",
 		"promotion": "N/A",
-		"url": "goeshere"
+		"url": "https://www.gnu.org/licenses/license-list.html#NoLicense"
 	},
 	{
 		"name": "GNU Affero General Public License, version 3.0",
@@ -61,7 +53,7 @@
 		"type": "Copyleft; overrides the GNU GPL",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://www.gnu.org/licenses/agpl-3.0.html"
 	},
 	{
 		"name": "GNU All-Permissive License",
@@ -69,7 +61,7 @@
 		"type": "Permissive",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html"
 	},
 	{
 		"name": "GNU General Public License, version 3.0",
@@ -77,15 +69,15 @@
 		"type": "Copyleft",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://www.gnu.org/licenses/gpl-3.0.html"
 	},
 	{
 		"name": "GNU Lesser General Public License, version 3.0",
 		"category": "Software",
-		"type": "Copyleft for libraries; GPL compatible",
+		"type": "Copyleft for libraries; GNU GPL compatible",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://www.gnu.org/licenses/lgpl-3.0.html"
 	},
 	{
 		"name": "ISC License",
@@ -93,15 +85,15 @@
 		"type": "Permissive",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://directory.fsf.org/wiki/License:ISC"
 	},
 	{
 		"name": "Mozilla Public License, version 2.0",
 		"category": "Software",
-		"type": "Copyleft; GPL compatible",
+		"type": "Copyleft; GNU GPL compatible",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://directory.fsf.org/wiki/License:MPL-2.0"
 	},
 	{
 		"name": "Public domain, no license",
@@ -109,7 +101,7 @@
 		"type": "Public domain",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://www.gnu.org/licenses/license-list.html#PublicDomain"
 	},
 	{
 		"name": "CC0",
@@ -117,7 +109,7 @@
 		"type": "Public domain",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://creativecommons.org/publicdomain/zero/1.0/"
 	},
 	{
 		"name": "Creative Commons Attribution 4.0",
@@ -125,7 +117,7 @@
 		"type": "Free to share and modify with credit",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://creativecommons.org/licenses/by/4.0/"
 	},
 	{
 		"name": "Creative Commons Attribution No-Derivatives 4.0",
@@ -133,7 +125,7 @@
 		"type": "Free to share with credit, but not modify",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://creativecommons.org/licenses/by-nd/4.0/"
 	},
 	{
 		"name": "Creative Commons Attribution Non-Commercial 4.0",
@@ -141,7 +133,7 @@
 		"type": "Free to share and modify with credit, but not for profit",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://creativecommons.org/licenses/by-nc/4.0/"
 	},
 	{
 		"name": "Creative Commons Attribution Non-Commercial No-Derivatives 4.0",
@@ -149,7 +141,7 @@
 		"type": "Free to share with credit, but not modify and not for profit",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
 	},
 	{
 		"name": "Creative Commons Attribution Non-Commercial Share-Alike 4.0",
@@ -157,7 +149,7 @@
 		"type": "Free to share and modify with credit, but not for profit, and only under the same license",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 	},
 	{
 		"name": "Creative Commons Attribution Share-Alike 4.0",
@@ -165,7 +157,7 @@
 		"type": "Free to share and modify with credit, but only under the same license",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://creativecommons.org/licenses/by-sa/4.0/"
 	},
 	{
 		"name": "FreeBSD Documentation License",
@@ -173,7 +165,7 @@
 		"type": "Permissive",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "http://directory.fsf.org/wiki?title=License:FreeBSD"
 	},
 	{
 		"name": "GNU Free Documentation License",
@@ -181,7 +173,7 @@
 		"type": "Copyleft",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://www.gnu.org/licenses/fdl.html"
 	},
 	{
 		"name": "GNU Verbatim Copyright License",
@@ -189,7 +181,7 @@
 		"type": "Copyright",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "https://www.gnu.org/licenses/licenses.html#VerbatimCopying"
 	},
 	{
 		"name": "SIL Open Font License",
@@ -197,6 +189,6 @@
 		"type": "Copyleft",
 		"patent": "goeshere",
 		"promotion": "goeshere",
-		"url": "goeshere"
+		"url": "http://directory.fsf.org/wiki/SIL_Open_Font_License_1.1"
 	}
 ]
