@@ -1,4 +1,11 @@
-[
+[	
+	{
+		"_noparse_copyright": "Copyright (C) 2020 Rachel Michaela Bradley",
+		"_noparse_project": "This file is a part of Project Licenser.",
+		"_noparse_license": "GNU Affero General Public License, version 3.0",
+		"_noparse_repository": "https://github.com/rachelmichaela/project-licenser",
+		"_noparse_notice": "Do not remove this section from this file."
+	},
 	{
 		"name": "Apache License, version 2.0",
 		"category": "Software",

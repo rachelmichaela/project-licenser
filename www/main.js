@@ -1,4 +1,30 @@
 /**
+ * @licstart  The following is the entire license notice for the 
+ *  JavaScript code in this page.
+ *
+ * Copyright (C) 2020 Rachel Michaela Bradley
+ *
+ * This file is a part of Project Licenser.
+ *
+ * Project Licenser is free software: you can redistribute it and/or 
+ * modify it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the 
+ * License, or (at your option) any later version.
+ *
+ * Project Licenser is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public 
+ * License along with Project Licenser.  If not, see 
+ * <https://www.gnu.org/licenses/>.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in this page.
+ */
+
+/**
  * When the page is initially loaded, this function will hide all of the
  * body of the page. It will then hide the tag that displays when
  * JavaScript is not enabled and show the tag that explains how to start
