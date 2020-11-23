@@ -1,9 +1,37 @@
 <!DOCTYPE html>
+<!--
+ Copyright (C) 2020 Rachel Michaela Bradley
+
+ This file is a part of Project Licenser.
+
+ Project Licenser is free software: you can redistribute it and/or 
+ modify it under the terms of the GNU Affero General Public License as
+ published by the Free Software Foundation, either version 3 of the 
+ License, or (at your option) any later version.
+
+ Project Licenser is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Affero General Public License for more details.
+
+ You should have received a copy of the GNU Affero General Public 
+ License along with Project Licenser.  If not, see 
+ <https://www.gnu.org/licenses/>.
+-->
 <html lang="en-GB" dir="ltr">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<title>Project Licenser - A tool that helps you pick a license for your project</title>
+		<meta name="description" content="Project Licenser is a tool that helps you pick a license for your project." />
+		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		<link rel="canonical" href="https://www.projectlicenser.org/" />
+		<meta property="og:locale" content="en_GB" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Project Licenser" />
+		<meta property="og:description" content="Project Licenser is a tool that helps you pick a license for your project." />
+		<meta property="og:url" content="https://www.projectlicenser.org/" />
+		<meta property="og:site_name" content="Project Licenser" />
 		<link type="text/css" rel="stylesheet" href="reset.css" />
 		<link type="text/css" rel="stylesheet" href="main.css" />
 		<script type="text/javascript" src="main.js"></script>
@@ -11,7 +39,13 @@
 	<body onload="pageLoad()" id="body">
 		<header>
 			<h1>Project Licenser</h1>
-			<p><em>A tool that helps you pick a license for your project.</em></p>
+			<h5><em>A tool that helps you pick a license for your project.</em></h5>
+			<br />
+			<nav>
+				<ul>
+					<li><a href="about/">About this tool</a></li>
+				</ul>
+			</nav>
 		</header>
 		<main>
 			<noscript id="noscript">
@@ -19,6 +53,7 @@
 				<p><strong>Emacs:</strong> Run <a href="https://www.gnu.org/software/emacs/manual/html_mono/eww.html#Basics">& (eww-browse-with-external-browser)</a> inside your Emacs Web Wowser buffer to open this page in an external web browser.</p>
 				<p><strong>Lynx:</strong> Install <a href="http://elinks.or.cz">ELinks</a> via your operating system's package manager, if your version of ELinks provides JavaScript support.</p>
 				<p><strong>Firefox:</strong> Switch to the JavaScript blocking plugin <a href="https://www.gnu.org/software/librejs/index.html">GNU LibreJS</a>. It allows free software scripts such as this page to run, blocking only proprietary scripts.</p>
+				<p><strong>GNU IceCat:</strong> Enable JavaScript. This page is powered by free software.</p>
 				<p><strong>Other browsers:</strong> Use one of the browsers mentioned above and follow the troubleshooting steps provided.</p>
 			</noscript>
 			<section id="start" class="triggered">
@@ -75,17 +110,23 @@
 			</section>
 		</main>
 		<footer>
-			<p>Data sources:</p>
-			<ol>
-				<li>Free Software Foundation (n.d.), <em>"Various Licenses and Comments about Them"</em>, [ONLINE]. <br />Available here: <a href="https://www.gnu.org/licenses/license-list.html">https://www.gnu.org/licenses/license-list.html</a>.</li>
-				<li>Open Source Initiative (n.d.), <em>"Open Source Licenses by Category"</em>, [ONLINE]. <br />Available here: <a href="https://opensource.org/licenses/category">https://opensource.org/licenses/category</a>.</li>
-			</ol>
-			<br />
+			<nav>
+				<ul>
+					<li><a href="about/#data-sources">Data sources</a></li>
+					<li><a href="about/#contribute">Contribute</a></li>
+					<li><a href="about/#legal">Legal disclaimer</a></li>
+				</ul>
+			</nav>
 			<p>
 				<strong><em>This tool is not a substitute for legal advice. Speak to a lawyer before licensing your project.</em></strong>
-				<br />
-				Copyright &copy; 2020 <a href="https://www.delevingne.me/">Rachel Michaela Bradley</a>.
 			</p>
+			<img src="agpl.png" alt="The logo of the GNU Affero General Public License, version 3.0." />
+			<p>
+				Copyright &copy; 2020 <a href="https://www.delevingne.me/">Rachel Michaela Bradley</a>. 
+				<br />
+				Released under the GNU Affero General Public License, version 3.0. <a href="https://github.com/rachelmichaela/project-licenser">(GitHub Source)</a>
+			</p>
+			<p>
 		</footer>
 	</body>
 </html>

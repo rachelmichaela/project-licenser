@@ -1,0 +1,151 @@
+# Frequently Asked Questions
+
+Document last updated 19th November, 2020 (3 Kislev 5781).
+
+### What is Project Licenser?
+
+Project Licenser (www.projectlicenser.org) is a website that helps users
+pick licenses for their projects based on their needs and preferences.
+
+### Who created this project?
+
+This project was created by and is stewarded by Rachel Michaela Bradley.
+(https://www.delevingne.me/, contact@delevingne.me). She is the main
+author and designated copyright holder.
+
+### Is Project Licenser free software?
+
+Yes. The software and content of Project Licenser are released under the
+terms of the GNU Affero General Public License, version 3.0. You may
+modify Project Licenser in accordance with those terms.
+
+### Where is the project source hosted?
+
+The project source can currently be found at the following URL.
+
+https://www.github.com/rachelmichaela/project-licenser/
+
+### What qualifies a license for inclusion in Project Licenser?
+
+There is no set requirement for each license. There are also no explicit
+requirements that would prevent inclusion; we do not limit the included
+options to free software or free culture licenses, or to compatibility
+with the GNU General Public License, for instance.
+
+Instead, licenses are evaluated on their own merit and present use.
+Examples of such criteria are as follows.
+
+**Merit:**
+- Licenses should be unique, or have a unique quality;
+- Licenses should serve a particular purpose;
+- Licenses should be legally adequate for encouraging their purpose;
+- Licenses should not depend upon the existence of other licenses, nor
+should the inclusion of a license require another, separate license be
+included;
+- Licenses should respect modesty.
+
+**Present Use:** 
+- Licenses should be used projects of note;
+- Licenses should not be in the process of being phased out by their
+authors or backing bodies;
+- Licenses should not be declared legally void or unenforceable in the
+jurisdiction of the countries that the author focuses their work
+towards.
+
+For example, the ISC License is included because it is used and
+preferred by the OpenBSD team, who are responsible not only for their
+operating system but also a wide array of associated products.
+
+The "WTFPL" is not included because it is not modest (vulgarity), it
+is not legally adequate (dangerously ambiguous and possibly satirical),
+and it is not used by projects of note.
+
+Generally speaking, we typically to include only the most recent version 
+of a license (e.g. GNU GPL version 3.0, not version 2.0). There is no
+particular bias against older versions in particular, and we may include
+then at our discretion, but we generally follow the advice of the 
+authors and backing bodies of a particular license as to what version
+is preferred.
+
+### My browser isn't included in the "no-script" instructions. Can you add it?
+
+Possibly. Please open a ticket in the GitHub repository and provide
+information about your browser.
+
+The current list of browsers is somewhat tongue-in-cheek, and it is the
+project author's intention that it should remain that way. Bear this in
+mind when providing your suggestion.
+
+### How do I contribute to Project Licenser?
+
+Users are encouraged to contribute to the development of Project
+Licenser. Below are some suggestions for prospective contributors.
+
+**For Developers:** 
+- Review CONDUCT before contributing.
+- Review README and CHANGES to see what has already been implemented.
+- Create an issue to discuss any proposed changes that you have.
+- Create a pull request if the consensus is in favour of your proposed
+changes, if said changes have not already been implemented.
+- Ensure that you state that you are granting all intellectual property
+rights to your contribution to the copyright holder of the project.
+
+**For Other Users:**
+- Review CONDUCT before contributing.
+- Review CHANGES to see what has already been implemented.
+- View DIAGRAM.PNG to see how the programme currently casts decisions.
+- Create an issue to discuss any proposed changes that you have.
+- If your change is approved, a developer will implement it and your 
+issue will be closed when it is complete.
+- Ensure that you state that you are granting all intellectual property
+rights to your contribution to the copyright holder of the project.
+
+The inclusion of contributions within the project is currently at the
+discretion of the project author.
+
+### Can you give me a technical explanation of how the project works?
+
+Sure. Project Licenser is an event-driven JavaScript application, 
+programmed without libraries or external dependencies. It works by
+displaying questions to the user, which the user then responds to by
+selecting either a positive or a negative response. 
+
+This response is then interpreted, and the programme then follows the 
+decision tree represented by DIAGRAMME.PNG. As it progresses through the
+tree, it weights appropriate items within the arrays of licenses to 
+reflect the growing value of a particular license. Once the tree reaches
+a terminal point, it displays the license with the most weight.
+
+The data shown to users once a terminal point has been reached is stored
+in a JSON file within the project's root directory. This JSON file can
+be updated separately to the main JavaScript file.
+
+### Why do you require contributors to grant copyright to the author?
+
+Many software projects, especially large free software projects, require
+contributors to relinquish all of the copyright and intellectual 
+property rights to the controller of the project. For example, 
+contributors to the GNU project are asked to assign all rights to the
+Free Software Foundation.
+
+There are a myriad of reasons as to why this is important, but here is
+a quick summary of the two major points.
+
+- By having a single copyright holder that owns all of a project's
+source, that copyright holder can take legal responsibility for the 
+entire source. This allows them to pursue legal action, such as license
+enforcement, on behalf of all project contributors. This helps defend
+software rights.
+- Should relicensing be required in the future, such as migrating to a
+new version of the GNU AGPL, the copyright holder can act upon their
+own discretion. If contributors do not assign their rights to the 
+copyright holder, then the copyright holder must consult each individual
+contributor, and then recreate all functionality implemented by each
+contributor that does not consent to the license change.
+
+### My question isn't answered here.
+
+I'm sorry to hear that. I recommend opening an issue on the GitHub
+repository. We will be able to answer your question there, and if we
+think the issue that you raise should be included here, it will for
+future releases.

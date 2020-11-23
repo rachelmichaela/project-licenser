@@ -1,0 +1,14 @@
+# Changelog
+
+Document last updated 19th November, 2020 (3 Kislev 5781).
+
+### Version 1.0.0
+
+First release version includes the following:
+- CHANGES, CONDUCT, COPYING, FAQ, and README files that reflect the 
+project nature;
+- The diagrammatic representation DIAGRAM.PNG of the project at launch;
+- The initial JavaScript script and associated HTML and CSS for running 
+the project;
+- An about page detailing the purpose of the project and how to
+contribute.
