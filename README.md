@@ -62,8 +62,7 @@ International
 ### Diagrammatic Representation
 
 ![A diagrammatic representation of the decision tree used by Project 
-Licenser.](https://github.com/rachelmichaela/project-licenser/
-DIAGRAM.png)
+Licenser.](DIAGRAM.PNG?raw=true)
 
 <!-- Individuals viewing this document in a text editor or via `cat` can
 	find the diagrammatic representation in the file DIAGRAM.PNG. 
